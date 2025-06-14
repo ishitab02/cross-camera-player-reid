@@ -12,7 +12,7 @@ def load_config(path="config/config.yaml"):
 def main():
     cfg = load_config()
 
-    # Run detection on both videos
+    # Run detection on videos
     run_detection(
         video_path=cfg['videos']['broadcast'],
         weights_path=cfg['model']['weights_path'],
@@ -40,7 +40,7 @@ def main():
         visualize=True
     )
 
-    # Extract embeddings and match players
+    # Extract embeddings and match players 
     extract_track_embeddings(
         "data/broadcast.mp4", 
         "outputs/broadcast_track_logs.json", 

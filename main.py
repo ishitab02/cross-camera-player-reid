@@ -12,33 +12,29 @@ def load_config(path="config/config.yaml"):
 def main():
     cfg = load_config()
 
-    # Run detection on videos
+    # Run detection on both videos
     run_detection(
         video_path=cfg['videos']['broadcast'],
         weights_path=cfg['model']['weights_path'],
         output_json_path=cfg['output']['broadcast_detections'],
-        visualize=True
-    )
+        visualize=True)
 
     run_detection(
         video_path=cfg['videos']['tacticam'],
         weights_path=cfg['model']['weights_path'],
         output_json_path=cfg['output']['tacticam_detections'],
-        visualize=True
-    )
+        visualize=True)
 
     # Run tracking on both videos
     run_tracking(
         video_path=cfg['videos']['broadcast'],
         weights_path=cfg['model']['weights_path'],
-        visualize=True
-    )
+        visualize=True)
 
     run_tracking(
         video_path=cfg['videos']['tacticam'],
         weights_path=cfg['model']['weights_path'],
-        visualize=True
-    )
+        visualize=True)
 
     # Extract embeddings and match players 
     extract_track_embeddings(

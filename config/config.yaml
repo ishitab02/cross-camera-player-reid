@@ -1,0 +1,13 @@
+videos:
+  broadcast: "data/broadcast.mp4"
+  tacticam: "data/tacticam.mp4"
+
+model:
+  weights_path: "weights/best.pt"
+
+output:
+  broadcast_detections: "outputs/broadcast_detections.json"
+  tacticam_detections: "outputs/tacticam_detections.json"
+  broadcast_tracking_video: "outputs/broadcast_tracked.mp4"
+  tacticam_tracking_video: "outputs/tacticam_tracked.mp4"
+  tracking_logs: "outputs/track_logs.json"

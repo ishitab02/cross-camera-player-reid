@@ -53,7 +53,7 @@ def main():
     match_players(
         broadcast_emb_path="outputs/broadcast_embeddings.json",
         tacticam_emb_path="outputs/tacticam_embeddings.json",
-        threshold=0.91) #prev 0.7
+        threshold=0.91) 
 
     assign_global_ids(
         broadcast_tracks_path="outputs/broadcast_track_logs.json",
